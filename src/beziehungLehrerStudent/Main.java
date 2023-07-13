@@ -1,17 +1,26 @@
+package beziehungLehrerStudent;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Eingabe with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Teacher teacher1=new Teacher("Tim", 1001, "Kunst", new String[]{"Muster str","11", "01234","Musterland"});
+        System.out.println(teacher1.toString());
+        teacher1.akademik("Artikel 1: abcd ", "Artikel 2: dfgh");
 
-        // Press Umschalt+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Student student1=new Student("Tim", 5001, "Mathe", new String[]{"Muster str","21", "01234","Musterland"}, 2.99);
+        System.out.println(student1.toString());
 
-            // Press Umschalt+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Strg+F8.
-            System.out.println("i = " + i);
-        }
+        Course course1=new Course("Netzwerke und Internettechnologien [Grundlagen]",
+                "G-101", "Informatik",
+                "Sieben Monate");
+        System.out.println(course1.toString());
+
+        Lesson lesson1=new Lesson("Netzwerke und Internettechnologien [Grundlagen]",
+                "TF_US_NEINT1", "Informatik", "Sieben Monate", "Internettechnologien",
+                "TF_US_NEINT1-I1");
+        System.out.println(lesson1.toString());
     }
+
+
 }
